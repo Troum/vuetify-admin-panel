@@ -1,0 +1,19 @@
+.lays-admin-navbar {
+  height: 76px;
+}
+.lays-admin-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lays-image-wrapper {
+  display: grid;
+  place-items: center;
+}
+
+.lays-image-fluid {
+  width: 100%;
+  height: auto;
+  margin-top: calc((100% - 400px) / 2);
+}

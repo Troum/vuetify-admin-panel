@@ -1,0 +1,13 @@
+<ifModule mod_rewrite.c>
+    RewriteEngine On
+        #301 to https
+        RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+        RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+        #remove www
+        RewriteCond %{SERVER_PORT} !^443$
+        RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+        #if file doesn't exist, redirect to main
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule (.*) /index.html [QSA,L]
+</ifModule>
