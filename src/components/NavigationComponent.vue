@@ -14,7 +14,15 @@
                 />
         </div>
         <v-spacer></v-spacer>
-
+        <v-btn
+                @click="exportData()"
+                text
+                color="secondary"
+                v-if="loggedIn"
+        >
+            <span class="mr-2">Выгрузить</span>
+            <v-icon>mdi-file-export-outline</v-icon>
+        </v-btn>
         <v-btn
                 @click="logout()"
                 target="_blank"
@@ -40,6 +48,9 @@
             logout() {
                     this.$jwt.remove();
                     this.$router.push({name: 'home'})
+            },
+            exportData() {
+                this.$root.$emit('export-type');
             }
         }
     }

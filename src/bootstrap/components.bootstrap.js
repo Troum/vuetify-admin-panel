@@ -7,6 +7,8 @@ import ModerateTable from "@/components/ModerateTable";
 import DeclineDialog from "@/components/DeclineDialog";
 import ConfirmDeclineAlert from "@/components/ConfirmDeclineAlert";
 import ConfirmApproveAlert from "@/components/ConfirmApproveAlert";
+import ExportTypeDialog from "@/components/ExportTypeDialog";
+import DownloadFileAlert from "../components/DownloadFileAlert";
 
 Vue.component('validation-observer', ValidationObserver);
 Vue.component('validation-provider', ValidationProvider);
@@ -17,3 +19,5 @@ Vue.component('decline-dialog', DeclineDialog);
 Vue.component('moderate-table', ModerateTable);
 Vue.component('confirm-decline-alert', ConfirmDeclineAlert);
 Vue.component('confirm-approve-alert', ConfirmApproveAlert);
+Vue.component('export-type-dialog', ExportTypeDialog);
+Vue.component('download-file-alert', DownloadFileAlert);
