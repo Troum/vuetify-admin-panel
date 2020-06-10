@@ -41,8 +41,13 @@
         name: "NavigationComponent",
         data() {
           return {
-              loggedIn: this.$jwt.token()
+              loggedIn: !!this.$jwt.token()
           }
+        },
+        mounted() {
+            this.$root.$on('login', () => {
+                this.loggedIn = true;
+            })
         },
         methods: {
             logout() {

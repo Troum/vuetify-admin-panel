@@ -62,6 +62,7 @@
                         .then((response) => {
                             this.$jwt.store(response.data.token);
                             this.$jwt.setAdmin();
+                            this.$root.$emit('login');
                             this.$store.commit('authentication', response.data.token);
                             this.$store.commit('alert', {status: true, message: response.data.success, type: 'success'});
                             this.$router.push({name: 'dashboard'});
