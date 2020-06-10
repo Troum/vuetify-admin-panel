@@ -47,6 +47,7 @@
         methods: {
             logout() {
                     this.$jwt.remove();
+                    this.loggedIn = false;
                     this.$router.push({name: 'home'})
             },
             exportData() {
