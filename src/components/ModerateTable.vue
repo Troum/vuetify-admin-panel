@@ -60,7 +60,6 @@
                         </v-simple-table>
                         <v-data-table
                                 fixed-header
-                                hide-default-footer
                                 :headers="betHeaders"
                                 :items="formatBet(item.bet)"
                         >
